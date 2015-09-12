@@ -68,7 +68,7 @@ td.TextItemSigOrphan { color: #AAFF00; background-color: #D6D6DF; }
 <body>
 <br/>
 &nbsp; &nbsp;
-<a href="#" onclick="toggle('TextItemNum')">nonums</a> | <a href="https://cdn.rawgit.com/laarc/notebook/89c086dbf8235ef910f61546fe4d6b9674d3dbd8/arc0-3.1.txt">inline</a> | 
+<a href="https://cdn.rawgit.com/laarc/notebook/89c086dbf8235ef910f61546fe4d6b9674d3dbd8/arc0-3.1.txt">inline</a> | 
 <a href="https://github.com/laarc/arc0">arc0</a> | 
 <a href="https://github.com/laarc/arc3.1">arc3.1</a>
 <br/>
@@ -83,28 +83,27 @@ This is a comparison of the first release of <a
  codebase is an instance of <a
    href="https://github.com/laarc/notebook/releases/download/1/onlisp.pdf">bottom-up</a>
  design: much of the code in the original is still present in the
- latest, and the diffs are mostly feature additions and bugfixes rather
- than refactors or rewrites.</p>
+ latest, and the diffs are mostly feature additions and bugfixes
+ rather than refactors or rewrites.</p>
 
 <p> Arc's compiler is written in Scheme, but the language itself is
 mostly written in Arc.  This is possible because the compiler (ac.scm)
 provides a minimal set of basic features, like the ability to
-manipulate strings and lists, the ability to construct a function,
-etc.  Using these basic abilities, the language is able to define
-itself in arc.arc.  It builds itself up similar to geometry: arc.arc
-uses the "axioms" provided by the compiler (assignment, comparison,
-etc) to define the various "theorems" of the language, like what it
-means to define a function, what it means to declare a variable, and
-so on.  And since your program is written in Arc, just like the
-language, you can do all of the same things that arc.arc does.  You
-can bend the language into whatever shape is most convenient for your
-program.  This design yields a number of benefits; both the
-language and the compiler are surprisingly short.</p>
+manipulate strings and lists, the ability to construct a function, and
+so on.  Using these basic abilities, the language is able to define
+itself in arc.arc.  It builds itself up similar to geometry: it uses
+the "axioms" provided by the compiler (assignment, comparison, etc) to
+define the various "theorems" of the language, like what it means to
+define a function or to declare a variable.  And since your program is
+written in Arc, just like the language, you can do all of the same
+things that arc.arc does.  You can bend the language into whatever
+shape is most convenient for your program.  This design has a number
+of benefits, yielding a brief language with a short compiler.</p>
 
 <p>
-Arc expressions are compiled to Scheme code via the "ac" function, and
-the result is executed using eval.  The original codebase runs on
-MzScheme 372, and the latest runs on <a
+Arc expressions are compiled to Scheme via the "ac" function, and the
+result is executed using eval.  The original codebase runs on MzScheme
+372, and the latest runs on <a
    href="http://racket-lang.org/">Racket</a>.</p>
 
 <p>
@@ -124,10 +123,18 @@ Right: <a href="https://github.com/laarc/arc3.1/releases/download/1/arc3.1.tar">
 Unfortunately, I wasn't able to find arc1.tar, arc2.tar, or arc3.tar.
 Their download URLs broke long ago, and archive.org doesn't seem to
 have any copies.  If you happen to have any of them, I would be very
-grateful if you'd send a copy to sudoarc@gmail.com.  news.arc is
+grateful if you'd send a copy to <a
+href="mailto:sudoarc@gmail.com">sudoarc@gmail.com</a>.  news.arc is
 absent from arc0, making it difficult to trace HN's evolutionary path.
 </p>
 
+<br/>
+<br/>
+<br/>
+
+&nbsp; &nbsp; <a href="#" onclick="toggle('TextItemNum')">nonums</a>
+
+<br/>
 <br/>
 <br/>
 <table class="fc" cellspacing="0" cellpadding="0">
